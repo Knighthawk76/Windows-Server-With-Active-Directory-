@@ -1,6 +1,7 @@
 # Windows-Server-With-Active-Directory and Powershell Automation-
 
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![Active Directory, Server, with Powershell]![image](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/f095eed7-f6f8-40c3-b09d-f71763eee261)
+
 
 ## Introduction
 
@@ -56,70 +57,23 @@ Here I am using a script that generates users and groups them into user by usern
 
 ## Task 4 Install and Configure Windows 10 Client
 
-Last step is creatng the Windows 10 client in Virtual Box
+Last step is creatng the Windows 10 client in Virtual Box. The VM was configured to have 4 processors and 2gb of Memory.  I utilized commandline on the client to run ipconfig to determine that the VM could reach the internet.  We were able to ping with VM which proves that the infrastructure is working.  I was also able to ping the myDomain.com and there was a response which means there is connectivity throught our build.
+
+![Architecture Diagram](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/78cfc74a-52d5-4f9f-ad31-0cb1e8c35d74)
+
 
 ![Architecture Diagram](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/6f24b218-a4e9-416b-9434-0db6d4fa5f93)
 
 
+![Architecture Diagram](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/d9c6efc8-e8df-47c3-b4ba-6ea511dd67cd)
 
 
 
+![Architecture Diagram](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/faa58e69-7638-494e-826d-d2e9e730c499)
 
 
 
-The architecture of the mini honeynet in Azure consists of the following components:
-
-- Virtual Network (VNet)
-- Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
-- Azure Key Vault
-- Azure Storage Account
-- Microsoft Sentinel
-
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
-
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
-
-## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
-
-## Metrics Before Hardening / Security Controls
-
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
-
-| Metric                   | Count
-| ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
-
-## Attack Maps Before Hardening / Security Controls
-
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
-
-## Metrics After Hardening / Security Controls
-
-The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
-
-| Metric                   | Count
-| ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
-| SecurityAlert            | 0
-| SecurityIncident         | 0
-| AzureNetworkAnalytics_CL | 0
-
+ 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
-
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+In this project, I learned juat how detailed the steps are in order to build a portion of organizational infastructure. While my simulation is far from perfect, I am more aware of how much detail goes into this. During this processed I got lost quite often and it required me to reach out to people and utilize online information to resolve my questions.  Ultimately I gained a deeper respect for the skills neccessary to be an engineer, how much I still need to learn and the patience needed to achieve the goal. As a result of this project I have more skill with windows server, Active Directory, and Powershell. I am more appreciative of the skills in automation and script building. I gained knowledge on how to deploy VDI with Virtual Box, and got more practice with virtual machines. This project makes me more well rounded in terms of building in the cloud and helped me to gain more skill in hybrid models of deployment.     
