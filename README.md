@@ -28,7 +28,7 @@ I installed Oracle Virtual Box, Windows server ISO, and Windows 10 ISO. Used the
 
 ## Task 2 more configuring 
 
-The next thing is to add the funcionality I needed for my server. I proceeded with assigning IP adressing for the internal network. the external network gets addressing for the my home router. Next I name the server, and add Active Directory, and configure Nat and routing so all the clients on my private networks can connect to the internet. I also setup a DHCP on the domain controller so my clients can automatically recieve an IP address.
+The next thing is to add the funcionality I needed for my server. I proceeded with assigning IP adressing for the internal network. the external network gets addressing from my home router. Next I name the server, and add Active Directory, and configure Nat and routing so all the clients on my private networks can connect to the internet. I also setup a DHCP on the domain controller so my clients can automatically recieve an IP address.
 
 
 ![Architecture Diagram](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/f794ce1d-78b9-488c-88dd-3dd36283b285)
