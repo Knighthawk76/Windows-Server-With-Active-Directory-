@@ -1,15 +1,27 @@
 # Windows-Server-With-Active-Directory and Powershell Automation-
 
-![Active Directory, Server, with Powershell]![image](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/f095eed7-f6f8-40c3-b09d-f71763eee261)
+Active Directory, Server, with Powershell![image](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/f095eed7-f6f8-40c3-b09d-f71763eee261)
 
 
 ## Introduction
 
-In this project, I build a full blown active directory lab on a windows server from my desktop computer using Oracle Virtual Box. Upon creating the server and active directory infastructure, I leverage powershell to execute a script that automates the onboarding of  1000 users. This greatly decreases time and effort as well as the potential of human errors. The goal is to gain a better understanding of Active Directory operations, the power of Powershell, and to gain a better understanding of Windows server administration.     
+# Windows Server Active Directory Homelab
 
-## Resources and Tools
+This project documents the creation of a complete, sandboxed Active Directory environment from scratch.
+The primary goal was to gain hands-on experience in Windows Server administration, Active Directory services, and PowerShell automation. The lab includes a Domain Controller and a Windows 10 client machine, all virtualized in VirtualBox.   
 
-For this project I will be leveraging my home computer, Windows Server 2019 which will be my domain controller, a Windows 10 virtual machine as a client, and Oracle Virtual Box as the tool to architect my Virtual Desktop Infrastructure. I leveraged powershell to do some of the heavy lifting like creating 1000 users which might simulate the scale of a small organization.  The script is also scalable if there were a need to add and create more users, and it was a strong ally for saving me time. The domain controller will house our active directory, and will be configured with two network interface cards(NIC). One will be used for outside internet and the other to the private networks (virtual Box).     
+
+
+
+
+
+### Tech Stack & Tools
+
+* **Virtualization:** Oracle VirtualBox
+* **Server OS:** Windows Server 2019
+* **Client OS:** Windows 10
+* **Core Services:** Active Directory Domain Services (AD DS), DNS
+* **Automation:** PowerShell (for bulk user creation)    
 
 
 ![Architecture Diagram](https://github.com/Knighthawk76/Windows-Server-With-Active-Directory-/assets/152114740/da615c01-fb6d-496c-8b0c-d27049fce35d)
@@ -76,4 +88,9 @@ Last step is creatng the Windows 10 client in Virtual Box. The VM was configured
  
 ## Conclusion
 
-In this project, I learned just how detailed the steps are in order to build a portion of organizational infastructure. While my simulation is far from perfect, I am more aware of how much detail goes into this. During this process I got lost quite often and it required me to reach out to people and utilize online information to resolve my questions.  Ultimately I gained a deeper respect for the skills neccessary to be an engineer, how much I still need to learn in terms of securing infrasructure, and the patience needed to achieve the goal. As a result of this project I have more skill with security configurations, windows server, Active Directory, and Powershell. I am more appreciative of the skills in automation and script building. I gained knowledge on how to deploy VDI with Virtual Box, and got more practice with virtual machines. This project makes me more well rounded in terms of building in the cloud and helped me to gain more skill in hybrid models of deployment.     
+### 💡 Conclusion & What I Learned
+
+This project was a deep dive into the fundamentals of enterprise IT infrastructure.
+* I gained practical skills in **Windows Server administration** and configuring core services like **AD DS** and **DNS**.
+* I learned how to use **PowerShell** for efficient automation, a critical skill for managing environments at scale.
+* This lab provides a solid foundation for more advanced topics, such as implementing Group Policy (GPOs), network security, and practicing offensive security techniques against a known environment.
